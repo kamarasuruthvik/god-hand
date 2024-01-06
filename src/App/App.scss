@@ -22,3 +22,17 @@ body {
   justify-content: center;
   text-align: center;
 }
+
+.content-box {
+  overflow-y: scroll;
+  padding-top: 10vh;
+
+  img {
+    z-index: 1;
+    height: 30vh;
+    position: relative;
+    width: auto;
+    border-radius: 50%;
+    border: 1px solid seashell;
+  }
+}

@@ -57,35 +57,45 @@ describe('application tests', () => {
     expect(parent).toHaveAttribute('href', link);
   };
 
-  it('should render name: Adam Alston', () => {
+  it('should render name: Ruthvik Kamarasu', () => {
     const element = screen.getByTestId('name');
 
-    checkContent(element, /^Adam Alston$/, undefined, true);
+    checkContent(element, /^Ruthvik Kamarasu$/, undefined, true);
   });
 
-  it('should render title: Software Engineer', () => {
+  it('should render title: Software Engineer | Grad Student @ SJSU', () => {
     const element = screen.getByTestId('title');
 
-    checkContent(element, /^Software Engineer$/, undefined, true);
+    checkContent(
+      element,
+      /^Software Engineer | Grad Student @ SJSU$/,
+      undefined,
+      true,
+    );
   });
 
   it('should render creator', () => {
     const element = screen.getByTestId('creator');
 
-    checkContent(element, /^Adam Alston$/, 'https://www.adamalston.com/');
+    checkContent(element, /^Ruthvik Kamarasu$/, 'https://www.adamalston.com/');
   });
 
   it('should render link to source code', () => {
     const element = screen.getByTestId('source');
 
-    checkContent(element, /^Source$/, 'https://github.com/adamalston/v2/');
+    checkContent(element, /^Source$/, 'https://github.com/kamarasuruthvik/v2/');
   });
 
   it('should render GitHub button', () => {
     const parent = screen.getByTestId('button-GitHub');
     const child = screen.getByTestId('GitHub');
 
-    checkButton(parent, child, /^GitHub$/, 'https://github.com/adamalston/');
+    checkButton(
+      parent,
+      child,
+      /^GitHub$/,
+      'https://github.com/kamarasuruthvik/',
+    );
   });
 
   it('should render LinkedIn button', () => {
@@ -96,7 +106,7 @@ describe('application tests', () => {
       parent,
       child,
       /^LinkedIn$/,
-      'https://www.linkedin.com/in/adam-alston/',
+      'https://www.linkedin.com/in/ruthvik-kamarasu-984a23166/',
     );
   });
 
@@ -116,7 +126,12 @@ describe('application tests', () => {
     const parent = screen.getByTestId('button-Email');
     const child = screen.getByTestId('Email');
 
-    checkButton(parent, child, /^Email$/, 'mailto:aalston9@gmail.com');
+    checkButton(
+      parent,
+      child,
+      /^Email$/,
+      'mailto:shivasairuthvik.kamarasu@sjsu.edu',
+    );
   });
 
   it('should toggle between the dark and light themes', () => {
@@ -145,7 +160,7 @@ describe('application tests', () => {
     const footer = screen.getByTestId('footer');
 
     expect(footer).toHaveTextContent(
-      /^Designed and built by Adam Alston \| Source$/,
+      /^Designed and built by Ruthvik Kamarasu \| Source$/,
     );
   });
 });
@@ -165,7 +180,9 @@ describe('app context tests', () => {
     // partial footer should now be visible
     const footer = screen.getByTestId('footer');
 
-    expect(footer).toHaveTextContent(/^Designed and built by Adam Alston$/);
+    expect(footer).toHaveTextContent(
+      /^Designed and built by Ruthvik Kamarasu$/,
+    );
     expect(footer).not.toHaveTextContent(/Source/);
   });
 

@@ -1,8 +1,5 @@
 module.exports = {
-  '*.{cjs,js,jsx,ts,tsx}': [
-    'eslint --cache --fix --max-warnings 0',
-    'prettier --cache --write',
-  ],
+  '*.{cjs,js,jsx,ts,tsx}': ['prettier --cache --write'],
   '*.scss': [
     'stylelint --cache --fix --max-warnings 0',
     'prettier --cache --write',

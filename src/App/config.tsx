@@ -3,10 +3,10 @@ import { Email, GitHub, LinkedIn, Resume } from 'icons';
 
 export const config: Config = {
   name: {
-    display: 'Adam Alston',
+    display: 'Ruthvik Kamarasu',
   },
   title: {
-    display: 'Software Engineer',
+    display: 'Software Engineer | Grad Student @ SJSU',
   },
   buttons: [
     {
@@ -14,14 +14,14 @@ export const config: Config = {
       display: 'GitHub',
       ariaLabel: 'GitHub profile (opens in new window)',
       icon: <GitHub />,
-      href: 'https://github.com/adamalston/',
+      href: 'https://github.com/kamarasuruthvik/',
     },
     {
       name: 'linked-in',
       display: 'LinkedIn',
       ariaLabel: 'LinkedIn profile (opens in new window)',
       icon: <LinkedIn />,
-      href: 'https://www.linkedin.com/in/adam-alston/',
+      href: 'https://www.linkedin.com/in/ruthvik-kamarasu-984a23166/',
     },
     {
       name: 'resume',
@@ -35,7 +35,7 @@ export const config: Config = {
       display: 'Email',
       ariaLabel: 'Email contact (opens in new window)',
       icon: <Email />,
-      href: 'mailto:aalston9@gmail.com',
+      href: 'mailto:shivasairuthvik.kamarasu@sjsu.edu',
     },
   ],
 };

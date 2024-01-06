@@ -1,8 +1,14 @@
 import { useEffect, useState } from 'react';
-
 import './App.scss';
 import { AppProvider } from './AppContext';
-import { Buttons, Content, Footer, Particles, Toggle } from 'components';
+import {
+  Buttons,
+  Content,
+  Footer,
+  Particles,
+  Toggle,
+  Project,
+} from 'components';
 import { config } from './config';
 
 export const App = () => {
@@ -39,8 +45,14 @@ export const App = () => {
     <AppProvider config={config} isMobile={isMobile}>
       <main className="app">
         <Toggle />
-        <Content />
-        <Buttons />
+        <div className="content-box">
+          <img
+            src="https://ik.imagekit.io/vclgut93d/Profille.jpg?updatedAt=1704533677245"
+            alt="profile"
+          />
+          <Content />
+          <Buttons />
+        </div>
         <Footer />
         <Particles />
       </main>
