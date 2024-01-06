@@ -7,7 +7,6 @@ import {
   Footer,
   Particles,
   Toggle,
-  Project,
 } from 'components';
 import { config } from './config';
 
