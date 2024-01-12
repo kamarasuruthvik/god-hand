@@ -33,32 +33,17 @@ export const Footer = () => {
   return (
     <F.Container $isMobile={isMobile}>
       <F.Text data-v2="footer" $theme={theme}>
-        {'Designed and built by '}
+        {'Chekckout source code: '}
         <F.Link
           data-v2="creator"
           aria-label="Ruthvik Kamarasu's personal website (opens in new window)"
-          href="https://www.adamalston.com/"
+          href="https://github.com/adamalston/v2/"
           rel="noopener noreferrer"
           target="_blank"
           $theme={theme}
         >
-          {'Ruthvik Kamarasu'}
+          {'Github'}
         </F.Link>
-        {!isMobile && (
-          <>
-            {' | '}
-            <F.Link
-              data-v2="source"
-              aria-label="Source code for this website (opens in new window)"
-              href="https://github.com/kamarasuruthvik/v2/"
-              rel="noopener noreferrer"
-              target="_blank"
-              $theme={theme}
-            >
-              {'Source'}
-            </F.Link>
-          </>
-        )}
       </F.Text>
     </F.Container>
   );
